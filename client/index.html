@@ -21,16 +21,17 @@
         
         <div class="form-group">
             <label for="quantidade">Description</label>
-            <input type="text" id="description" class="form-control" required/>
+            <input type="text" id="description" class="form-control" placeholder="Item Description" required/>
         </div>
         
         <div class="form-group">
-            <label for="valor">Price</label>
-            <input id="amount" type="number" class="form-control"  min="0.01" step="0.01" value="0.0" required />
+            <label for="valor">Cost</label>
+            <input id="amount" type="number" class="form-control"  min="0.01" step="0.01" placeholder="0" required />
         </div>
         
         <button class="btn btn-primary" type="submit">Insert</button>
     </form>
+    <div id="messageView"></div>
     
     <div class="text-center">
         <button class="btn btn-primary text-center" type="button">
@@ -42,22 +43,10 @@
     </div> 
     <br>
     <br>
+
+    <div id="expensesView"></div>
     
-    <table class="table table-hover table-bordered">
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th>Description</th>
-                <th>Price</th>
-            </tr>
-        </thead>
-        
-        <tbody>
-        </tbody>
-        
-        <tfoot>
-        </tfoot>
-    </table>
+    
     
     <footer class="page-footer">
         <hr class="hr-primary" />
@@ -68,12 +57,18 @@
     <!-- Importing models -->
     <script src="js/app/models/Expense.js"></script>
     <script src="js/app/models/ExpensesList.js"></script>
+    <script src="js/app/models/Message.js"></script>
 
     <!-- Importing controllers -->
     <script src="js/app/controllers/ExpensesController.js"></script>
 
     <!-- Importing helpers -->
     <script src="js/app/helpers/DateHelper.js"></script>
+
+    <!-- Importing views -->
+    <script src="js/app/views/View.js"></script>
+    <script src="js/app/views/ExpensesView.js"></script>
+    <script src="js/app/views/MessageView.js"></script>
 
     <script>
         let expensesController = new ExpensesController();

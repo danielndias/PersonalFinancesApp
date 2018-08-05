@@ -1,10 +1,10 @@
 class Expense {
 
-    constructor(date, description, price) {
+    constructor(date, description, cost) {
         
         this._date = new Date(date.getTime());
         this._description = description;
-        this._price = price;
+        this._cost = cost;
 
         // Freeze the instance to avoid changing after creation.
         Object.freeze(this);
@@ -18,8 +18,8 @@ class Expense {
         return this._description;
     }
 
-    get price() {
-        return this._price;
+    get cost() {
+        return this._cost;
     }
 
 }
